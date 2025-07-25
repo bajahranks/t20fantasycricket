@@ -32,18 +32,19 @@ body {
 
 .hero {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 900px;
+    height: auto;
+    padding: 4rem 1rem 2rem 1rem; /* Adjust padding for mobile */
     background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-    padding: 2rem;
     position: relative; /* For positioning the scroll arrow */
 }
 
 .hero-content {
-    flex: 1;
-    max-width: 500px;
-    text-align: left;
+    order: 1; /* Content first */
+    text-align: center;
+    max-width: 100%;
     padding: 2rem;
 }
 
@@ -63,18 +64,19 @@ body {
 }
 
 .hero-image-container {
-    flex: 1;
+    order: 2; /* Image second */
+    padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem;
+    margin-top: -24em;
 }
 
 .hero-screenshot {
-    max-width: 80%; /* Reduced size */
+    max-width: 90%;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    transform: rotate(3deg) scale(0.6, 0.6) !important;
+    transform: rotate(0deg) scale(0.5,0.5) !important; /* Reset for mobile */
     transition: transform 0.3s ease-in-out;
     z-index: 1;
 }
@@ -91,6 +93,7 @@ body {
     color: white;
     font-size: 2rem;
     animation: bounce 2s infinite;
+    display: none; /* Hide on mobile */
 }
 
 @keyframes bounce {
@@ -136,7 +139,7 @@ section {
 }
 
 .slideshow-container {
-    height: 500px;
+    height: 300px;
     width: 100%; /* Use full width of the parent */
     max-width: 1200px; /* Increase max-width for carousel view */
     margin: auto;
@@ -175,6 +178,11 @@ section {
     padding: 15px 30px;
     font-weight: 600;
     transition: all 0.3s ease;
+    display: block;
+    margin-bottom: 1rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #download .btn:hover {
@@ -186,4 +194,59 @@ section {
 footer {
     background-color: var(--primary-color) !important;
     padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* --- Tablet and Larger --- */
+@media (min-width: 768px) {
+    .hero {
+        height: 900px;
+        padding: 2rem;
+    }
+
+    .slideshow-container {
+        height: 400px;
+    }
+
+    .download-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    #download .btn {
+        width: auto; /* Allow buttons to size to their content */
+    }
+}
+
+/* --- Laptop and Larger --- */
+@media (min-width: 992px) {
+    .hero {
+        flex-direction: row;
+    }
+
+    .hero-content {
+        order: 1;
+        text-align: left;
+        max-width: 500px;
+    }
+
+    .hero-image-container {
+        order: 2;
+    }
+
+    .hero-screenshot {
+        transform: rotate(3deg) scale(0.6, 0.6) !important;
+    }
+
+    .hero-screenshot:hover {
+        transform: rotate(0deg) scale(1.0, 1.0) !important;
+    }
+
+    .scroll-down {
+        display: block;
+    }
 }

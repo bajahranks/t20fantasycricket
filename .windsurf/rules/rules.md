@@ -13,3 +13,4 @@ globs:
  - The next league on the app is the Caribbean Premiere League (CPL)
  - Make recommendations on what can be added to improve the website
  - Don't make any more changes to the header hero section unless I explicitly ask you to do so.
+ - For responsiveness use a mobile-first approach
