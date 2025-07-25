@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JiggleTap - T20 Fantasy Cricket | Account Deletion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../images/jiggletap_logo_no_text.png">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .info-section {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .steps {
+            margin: 20px 0;
+            padding-left: 20px;
+        }
+        .steps li {
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .data-retention {
+            margin-top: 30px;
+        }
+        .highlight {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body class="m-20">
+    <div class="container">
+        <h1>Account Deletion Request</h1>
+        
+        <div class="info-section">
+            <h2>About JiggleTap</h2>
+            <p>JiggleTap is committed to protecting your privacy and providing you with control over your personal data. This page explains how you can request account deletion and what happens to your data.</p>
+            
+            <h3>How to Request Account Deletion</h3>
+            <ol class="steps">
+                <li><span class="highlight">Fill out the form below</span> with your account email and reason for deletion (optional but appreciated).</li>
+                <li><span class="highlight">Click "Submit Deletion Request"</span> to send us your request.</li>
+                <li>We will contact you via email to verify your request.</li>
+                <li>Your account will be deactivated immediately upon verification.</li>
+            </ol>
+            
+            <div class="data-retention">
+                <h3>What Happens to Your Data</h3>
+                <p>When you request account deletion, the following will occur:</p>
+                <ul class="steps">
+                    <li><span class="highlight">Immediate Deletion:</span> Your profile information, app history, and personal data will be removed from our active systems.</li>
+                    <li><span class="highlight">30-Day Retention:</span> Your data will be kept in our backup systems for up to 30 days before permanent deletion.</li>
+                    <li><span class="highlight">Data We Retain:</span> We may retain certain information as required by law, including:
+                        <ul>
+                            <li>Transaction records for financial reporting</li>
+                            <li>Records of any violations of our Terms of Service</li>
+                            <li>Information required for legal compliance</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <p>If you have any questions about our data retention policies, please contact our support team at <a href="mailto:support@jiggletap.com">support@jiggletap.com</a>.</p>
+            </div>
+        </div>
+
+        <h2>Request Account Deletion</h2>
+        <form id="delete-info" action="https://smartforms.dev/submit/686efab6c184545ccc0bf742" method="POST">
+            <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input id="email" type="email" name="email" required>
+                <small>Please enter the email associated with your JiggleTap account</small>
+            </div>
+            <div class="form-group">
+                <label for="reason">Reason for Deletion (Optional)</label>
+                <textarea id="reason" name="reason" rows="4" placeholder="Help us improve by sharing your reason for leaving"></textarea>
+            </div>
+
+            <div class="form-group" style="display: flex; align-items: baseline; ">
+                <input type="checkbox" id="confirm-delete" name="confirm-delete" style="width: auto; display: flex; margin-right: 10px;" required>
+                <label for="confirm-delete">I understand that this action is irreversible and all my game data will be permanently deleted.</label>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Deletion Request</button>
+        </form>
+    </div>
+</body>
+</html>

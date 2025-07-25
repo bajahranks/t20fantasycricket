@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Play - T20 Fantasy Cricket</title>
+    <link rel="icon" type="image/svg+xml" href="../images/t20-fantasy-cricket-logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1a5f7a;
+            --secondary: #57c5b6;
+            --accent: #159895;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background-color: #f5f7fa;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid var(--secondary);
+            display: inline-block;
+        }
+        
+        h3 {
+            color: var(--accent);
+            margin: 1.5rem 0 1rem;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border-left: 4px solid var(--secondary);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+        }
+        
+        .points-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+        }
+        
+        .points-table th, .points-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .points-table th {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .points-table tr:nth-child(even) {
+            background-color: #f8f9fa;
+        }
+        
+        .highlight {
+            background-color: #fff9c4 !important;
+            font-weight: 600;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .badge-primary {
+            background-color: #e3f2fd;
+            color: var(--primary);
+        }
+        
+        .badge-success {
+            background-color: #e8f5e9;
+            color: var(--success);
+        }
+        
+        .badge-warning {
+            background-color: #fff8e1;
+            color: #ff8f00;
+        }
+        
+        .icon {
+            margin-right: 0.5rem;
+            color: var(--accent);
+        }
+        
+        ol, ul {
+            padding-left: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        li {
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            color: #6c757d;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
+        }
+        .mb-10 {
+            margin-bottom: 10px;
+        }
+        
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header-text {
+            text-align: left;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+            line-height: 1.2;
+            color: white;
+        }
+        
+        header img.logo {
+            height: 70px;
+            width: auto;
+            max-width: 100px;
+            object-fit: contain;
+        }
+        
+        header p {
+            margin: 0.25rem 0 0 0;
+            opacity: 0.9;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <img src="../images/t20-fantasy-cricket-logo.png" alt="T20 Fantasy Cricket Logo" class="logo">
+                <div class="header-text">
+                    <h1>T20 Fantasy Cricket</h1>
+                    <p>Your ultimate t20 fantasy cricket experience</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="section">
+            <h2>How to Play</h2>
+            
+            <div class="card mb-10">
+                <h3><i class="fas fa-trophy icon"></i>Leagues</h3>
+                <p>The first screen you will see after logging in is the leagues screen. Here you can join existing leagues.</p>
+            </div>
+            
+            <div class="card mb-10">
+                <h3><i class="fas fa-users icon"></i>Teams</h3>
+                <p>Once you have joined a league, you will see the teams screen. The teams screen is made up of three sections:</p>
+                <ol>
+                    <li><strong>Team stats</strong> - Shows number of players, total value, total points, and current rank</li>
+                    <li><strong>Team players</strong> - Displays your selected players with their details</li>
+                    <li><strong>View leaderboard</strong> - Directs you to the leaderboard screen</li>
+                </ol>
+                <p>To add players, visit the market screen. Player cards show their image, name, team, type, value,
+                    and points earned while on your team. Tapping on the player will display a modal that contains the player's
+                    performance for the current season and a button to remove the player from your team.</p>
+            </div>
+            
+            <div class="card mb-10">
+                <h3><i class="fas fa-store icon"></i>Market</h3>
+                <p>Build your dream team by selecting players from the market:</p>
+                <div class="grid">
+                    <div>
+                        <h4>Filter Section</h4>
+                        <ul>
+                            <li>Search by player name</li>
+                            <li>Sort by name, price, or points</li>
+                            <li>Filter by player type and team</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Player List</h4>
+                        <ul>
+                            <li>View available players</li>
+                            <li>Tap to add to team</li>
+                            <li>Long press for player stats</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Team Details</h4>
+                        <ul>
+                            <li>Track team size and budget</li>
+                            <li>Monitor transfers remaining</li>
+                            <li>Save your team</li>
+                        </ul>
+                    </div>
+                </div>
+                <p><em>Note:</em> Save button becomes disabled after tournament starts based on game situation.</p>
+            </div>
+            
+            <div class="card mb-10">
+                <h3><i class="fas fa-list-ol icon"></i>Leaderboard</h3>
+                <p>Track your performance against other players:</p>
+                <div class="grid">
+                    <div>
+                        <h4>Overall Leaderboard</h4>
+                        <p>See your position for the current season</p>
+                    </div>
+                    <div>
+                        <h4>Round-wise Leaderboard</h4>
+                        <p>Compare performance for each round</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card mb-10">
+                <h3><i class="fas fa-user-cog icon"></i>Profile</h3>
+                <p>Manage your account settings:</p>
+                <ul>
+                    <li>Update your name and password</li>
+                    <li>View documentation</li>
+                    <li>Sign out or delete your account</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Game Rules</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3><i class="fas fa-users-cog icon"></i>Team Composition</h3>
+                    <p>Each team must have exactly 11 players:</p>
+                    <ul>
+                        <li><span class="badge badge-primary">4</span> Bowlers</li>
+                        <li><span class="badge badge-primary">4</span> Batters</li>
+                        <li><span class="badge badge-primary">2</span> All-rounders</li>
+                        <li><span class="badge badge-primary">1</span> Wicket-keeper</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3><i class="fas fa-exchange-alt icon"></i>Transfers</h3>
+                    <p>Between rounds, you can make up to <span class="badge badge-warning">4 transfers</span> to optimize your team.</p>
+                </div>
+                
+                <div class="card">
+                    <h3><i class="fas fa-chart-line icon"></i>Player Values</h3>
+                    <p>Player values change between rounds based on performance. If your team value exceeds the maximum, you won't earn points until it's resolved.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Scoring Points</h2>
+            <p>Players earn points based on their match performance. Here's how points are calculated:</p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>Batting</h3>
+                    <table class="points-table">
+                        <tr>
+                            <th>Action</th>
+                            <th>Points</th>
+                        </tr>
+                        <tr>
+                            <td>Runs Scored</td>
+                            <td>+1 per run</td>
+                        </tr>
+                        <tr>
+                            <td>Balls Faced</td>
+                            <td>-1 per ball</td>
+                        </tr>
+                        <tr>
+                            <td>Fours</td>
+                            <td>+1 per four</td>
+                        </tr>
+                        <tr>
+                            <td>Sixes</td>
+                            <td>+2 per six</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="card">
+                    <h3>Bowling</h3>
+                    <table class="points-table">
+                        <tr>
+                            <th>Action</th>
+                            <th>Points</th>
+                        </tr>
+                        <tr>
+                            <td>Wickets</td>
+                            <td>+10 per wicket</td>
+                        </tr>
+                        <tr>
+                            <td>Runs Conceded</td>
+                            <td>-1 per run</td>
+                        </tr>
+                        <tr>
+                            <td>Balls Bowled</td>
+                            <td>+1 per ball bowled</td>
+                        </tr>
+                        <tr>
+                            <td>Dot Balls</td>
+                            <td>+2 per dot ball</td>
+                        </tr>
+                        <tr>
+                            <td>Maidens</td>
+                            <td>+10 per maiden</td>
+                        </tr>
+                        <tr>
+                            <td>Wides</td>
+                            <td>-2 per wide</td>
+                        </tr>
+                        <tr>
+                            <td>No Balls</td>
+                            <td>-5 per no ball</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="card">
+                    <h3>Fielding</h3>
+                    <table class="points-table">
+                        <tr>
+                            <th>Action</th>
+                            <th>Points</th>
+                        </tr>
+                        <tr>
+                            <td>Catches</td>
+                            <td>+5 per catch</td>
+                        </tr>
+                        <tr>
+                            <td>Stumpings</td>
+                            <td>+5 per stumping</td>
+                        </tr>
+                        <tr>
+                            <td>Run Out (Shared)</td>
+                            <td>+5 per run out</td>
+                        </tr>
+                        <tr>
+                            <td>Run Out (Direct)</td>
+                            <td>+10 per run out</td>
+                        </tr>
+                    </table>
+                </div>
+                
+                <div class="card">
+                    <h3>Milestones</h3>
+                    <table class="points-table">
+                        <tr>
+                            <th>Milestone</th>
+                            <th>Points</th>
+                        </tr>
+                        <tr class="highlight">
+                            <td>30+ Runs</td>
+                            <td>+20</td>
+                        </tr>
+                        <tr class="highlight">
+                            <td>50+ Runs</td>
+                            <td>+40</td>
+                        </tr>
+                        <tr class="highlight">
+                            <td>100+ Runs</td>
+                            <td>+100</td>
+                        </tr>
+                        <tr class="highlight">
+                            <td>3 Wickets</td>
+                            <td>+20</td>
+                        </tr>
+                        <tr class="highlight">
+                            <td>4 Wickets</td>
+                            <td>+40</td>
+                        </tr>
+                        <tr class="highlight">
+                            <td>5+ Wickets</td>
+                            <td>+100</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="container">
+        <p>&copy; 2025 T20 Fantasy Cricket. All rights reserved.</p>
+    </footer>
+</body>
+</html>
