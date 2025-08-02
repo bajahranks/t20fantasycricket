@@ -17,83 +17,9 @@ body {
     background-blend-mode: overlay;
 }
 
-.navbar {
-    background-color: rgba(103, 80, 164, 0.8) !important; /* Purple with transparency */
-    backdrop-filter: blur(10px);
-}
-
-.navbar-brand img {
-    transition: transform 0.3s ease;
-}
-
-.navbar-brand:hover img {
-    transform: rotate(360deg);
-}
-
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: auto;
-    padding: 4rem 1rem 2rem 1rem; /* Adjust padding for mobile */
-    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-    position: relative; /* For positioning the scroll arrow */
-}
-
-.hero-content {
-    order: 1; /* Content first */
-    text-align: center;
-    max-width: 100%;
-    padding: 2rem;
-}
-
-.hero-logo {
-    width: 60px; /* Reduced size */
-    margin-bottom: 1rem;
-}
-
-.hero h1 {
-    font-size: 2.8rem; /* Reduced size */
-    font-weight: 700;
-    text-shadow: 0 0 15px rgba(0,0,0,0.5);
-}
-
-.hero p {
-    font-size: 1.1rem; /* Reduced size */
-}
-
-.hero-image-container {
-    order: 2; /* Image second */
-    padding: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: -24em;
-}
-
-.hero-screenshot {
-    max-width: 90%;
-    border-radius: 20px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-    transform: rotate(0deg) scale(0.5,0.5) !important; /* Reset for mobile */
-    transition: transform 0.3s ease-in-out;
-    z-index: 1;
-}
-
-.hero-screenshot:hover {
-    transform: rotate(0deg) scale(1.0, 1.0) !important;
-}
-
-.scroll-down {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 2rem;
-    animation: bounce 2s infinite;
-    display: none; /* Hide on mobile */
+section {
+    padding: 60px 20px;
+    margin: 40px 0;
 }
 
 @keyframes bounce {
@@ -108,26 +34,98 @@ body {
     }
 }
 
+/*** Header Styles ***/
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 1150px !important;
+    padding: 4rem 1rem 2rem 1rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    position: relative;
+}
+.hero h1 {
+    font-size: 2.8rem; /* Reduced size */
+    font-weight: 700;
+    text-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+.hero p {
+    font-size: 1.1rem; /* Reduced size */
+}
+.hero-content {
+    order: 1; /* Content first */
+    text-align: center;
+    max-width: 100%;
+    padding: 2rem;
+}
+.hero-logo {
+    width: 60px; /* Reduced size */
+    margin-bottom: 1rem;
+}
+.hero-image-container {
+    order: 2; /* Image second */
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -24em;
+}
+.hero-screenshot {
+    max-width: 180%;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    transform: rotate(0deg) scale(0.5,0.5) !important; /* Reset for mobile */
+    transition: transform 0.3s ease-in-out;
+    z-index: 1;
+}
+.hero-screenshot:hover {
+    transform: rotate(0deg) scale(1.0, 1.0) !important;
+}
+.scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 2rem;
+    animation: bounce 2s infinite;
+    display: none; /* Hide on mobile */
+}
+/*** End of Header Styles ***/
+
+/*** Download Section Styles ***/
+.download .btn {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.download .btn:hover {
+    background-color: var(--text-color);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 255, 133, 0.2);
+}
+/*** End of Download Section Styles ***/
+
+/*** Feature Section Styles ***/
 #features {
     font-family: 'Montserrat', sans-serif;
 }
-
+#features h3 {
+    color: var(--accent-color);
+    font-weight: 600;
+}
 .feature-icon {
     font-size: 3rem;
     color: var(--accent-color);
     margin-bottom: 1rem;
 }
+/*** End of Feature Section Styles ***/
 
-section {
-    padding: 60px 20px;
-    margin: 40px 0;
-}
-
-#features h3 {
-    color: var(--accent-color);
-    font-weight: 600;
-}
-
+/*** CPL Promo Section Styles ***/
 #cpl-promo {
     background: linear-gradient(45deg, var(--accent-color), #00c4ff);
     color: var(--primary-color);
@@ -137,15 +135,17 @@ section {
 #cpl-promo h2 {
     font-weight: 700;
 }
+/*** End of CPL Promo Section Styles ***/
 
+/*** Slideshow Styles ***/
 .slideshow-container {
     height: 300px;
     width: 100%; /* Use full width of the parent */
     max-width: 1200px; /* Increase max-width for carousel view */
     margin: auto;
     overflow: hidden; /* This is crucial for the carousel effect */
-    display: flex; /* Align items for the carousel */
     align-items: center; /* Center slides vertically */
+    display: none; /* Hide by default */
 }
 
 .slideshow-container .screenshot {
@@ -170,27 +170,9 @@ section {
 .slideshow-container .screenshot.next {
     z-index: 5;
 }
+/*** END of Slideshow Styles ***/
 
-#download .btn {
-    background-color: var(--accent-color);
-    color: var(--primary-color);
-    border: none;
-    padding: 15px 30px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    display: block;
-    margin-bottom: 1rem;
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#download .btn:hover {
-    background-color: var(--text-color);
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 255, 133, 0.2);
-}
-
+/*** Footer Styles ***/
 footer {
     background-color: var(--primary-color) !important;
     padding: 20px;
@@ -203,13 +185,14 @@ footer p {
 .footer-links a {
     color: white;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 10px;
     transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
     color: var(--accent-color);
 }
+/*** End of Footer Styles ***/
 
 /* --- Tablet and Larger --- */
 @media (min-width: 768px) {
