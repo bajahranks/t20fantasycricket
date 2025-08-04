@@ -39,7 +39,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 1150px !important;
     padding: 4rem 1rem 2rem 1rem;
     background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
@@ -69,7 +69,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -24em;
+    max-height: 67%;
 }
 .hero-screenshot {
     max-width: 180%;
