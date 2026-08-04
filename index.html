@@ -3,96 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>T20 Fantasy Cricket</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg+xml" href="images/t20-fantasy-cricket-logo.png">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <meta name="description" content="Build your T20 fantasy XI, follow live performances, and compete with cricket fans around the world.">
+    <meta name="theme-color" content="#07110f">
+    <title>T20 Fantasy Cricket — Own the innings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="images/t20-fantasy-cricket-logo.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-dark">
-    <header class="hero text-white text-center">
-        <div class="hero-content">
-            <img src="images/t20-fantasy-cricket-logo.png" alt="T20 Fantasy Cricket Logo" class="hero-logo">
-            <h1>T20 Fantasy Cricket</h1>
-            <p class="lead">Build your dream team & compete in the ultimate fantasy cricket experience.</p>
+<body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header" data-header>
+        <div class="shell nav-wrap">
+            <a class="brand" href="index.html" aria-label="T20 Fantasy Cricket home">
+                <img src="images/t20-fantasy-cricket-logo.png" alt="" width="48" height="48">
+                <span>T20 <b>Fantasy Cricket</b></span>
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu" data-menu-toggle>
+                <span></span><span></span>
+            </button>
+            <nav class="site-nav" id="site-nav" aria-label="Primary navigation" data-nav>
+                <a class="active" href="index.html" aria-current="page">Home</a>
+                <a href="how-to-play.html">How to Play</a>
+                <a class="nav-cta" href="https://play.t20fantasycricket.com/">Play online <span aria-hidden="true">↗</span></a>
+            </nav>
         </div>
-        <div class="hero-image-container">
-            <img src="images/screenshots/Screenshot_20250717_172113_Expo Go.jpg" alt="App Screenshot" class="hero-screenshot">
-        </div>
-        <a href="#features" class="scroll-down">&#8595;</a>
     </header>
 
-    <main class="container mt-5">
-        <section class="text-center p-5 download">
-            <h2>Download Now!</h2>
-            <p>Get the T20 Fantasy Cricket app on your favorite platform.</p>
-            <div class="download-buttons">
-                <a href="https://play.google.com/store/apps/details?id=com.jiggletap.t20fantasycricket" class="btn btn-lg btn-dark me-2">Google Play Store</a>
-                <a href="https://play.t20fantasycricket.com/" class="btn btn-lg btn-dark">Play Online</a>
-                <!--<a href="#" class="btn btn-lg btn-dark d-none">Apple App Store</a>-->
+    <main id="main-content">
+        <section class="hero">
+            <div class="hero-glow" aria-hidden="true"></div>
+            <div class="shell hero-grid">
+                <div class="hero-copy reveal">
+                    <h1>Own the<br><em>innings.</em></h1>
+                    <p>Build your XI. Follow every ball.<br>Rise through the ranks.</p>
+                    <div class="button-row">
+                        <a class="button button-primary" href="https://play.t20fantasycricket.com/">Play online <span aria-hidden="true">↗</span></a>
+                        <a class="button button-secondary" href="https://play.google.com/store/apps/details?id=com.jiggletap.t20fantasycricket">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 2.6c-.38.44-.6 1.11-.6 1.96v14.88c0 .85.22 1.52.6 1.96l.1.1L12.04 12v-.22L3.7 2.5l-.1.1Zm11.22 12.62-2.78-3.1v-.22l2.79-3.1.07.04 3.3 1.87c.94.53.94 1.4 0 1.94l-3.3 1.86-.08.04v.67Zm-.83.93L11.1 12.9l-7.4 8.38c.54.58 1.43.65 2.43.09l7.86-4.44v-.78Zm0-8.3L6.13 3.4c-1-.56-1.89-.49-2.43.09l7.4 8.38 2.89-3.25v-.77Z"/></svg>
+                            Get the app
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual reveal" aria-label="T20 Fantasy Cricket team screen">
+                    <div class="score-line score-line-one" aria-hidden="true">11 / XI</div>
+                    <div class="score-line score-line-two" aria-hidden="true">LIVE</div>
+                    <div class="phone phone-hero">
+                        <div class="phone-speaker"></div>
+                        <img src="images/screenshots/Screenshot_20250717_171812_Expo Go.jpg" alt="Player team and ranking inside the T20 Fantasy Cricket app">
+                    </div>
+                    <div class="orbit orbit-one" aria-hidden="true"></div>
+                    <div class="orbit orbit-two" aria-hidden="true"></div>
+                </div>
             </div>
+            <a class="scroll-cue" href="#experience"><span>Explore the game</span><i aria-hidden="true">↓</i></a>
         </section>
-        <section id="features" class="row text-center">
-            <div class="col-md-4">
-                <i class="bi bi-people-fill feature-icon"></i>
-                <h3>Assemble Your Team</h3>
-                <p>Create your dream T20 team with real players from leagues around the world.</p>
-            </div>
-            <div class="col-md-4">
-                <i class="bi bi-graph-up-arrow feature-icon"></i>
-                <h3>Live Tracking</h3>
-                <p>Track your players' performances live and watch your score update in real-time.</p>
-            </div>
-            <div class="col-md-4">
-                <i class="bi bi-trophy-fill feature-icon"></i>
-                <h3>Climb the Ranks</h3>
-                <p>Compete with friends and other fans to prove your cricket knowledge and top the leaderboards.</p>
+
+        <section class="experience" id="experience">
+            <div class="shell experience-grid">
+                <div class="section-copy reveal">
+                    <h2>Play your<br><em>way.</em></h2>
+                    <p class="section-lead">Fantasy cricket that puts you in control.</p>
+                    <div class="feature-list">
+                        <article class="feature-item">
+                            <span class="feature-number">01</span>
+                            <div><h3>Build your XI</h3><p>Pick the players you believe in and shape a team that is uniquely yours.</p></div>
+                        </article>
+                        <article class="feature-item">
+                            <span class="feature-number">02</span>
+                            <div><h3>Follow every ball</h3><p>Track live performances and watch every run, wicket, and catch move your score.</p></div>
+                        </article>
+                        <article class="feature-item">
+                            <span class="feature-number">03</span>
+                            <div><h3>Climb the table</h3><p>Compete with friends and fans to prove your cricket knowledge.</p></div>
+                        </article>
+                    </div>
+                    <a class="text-link" href="how-to-play.html">See how it works <span aria-hidden="true">→</span></a>
+                </div>
+
+                <div class="phone-stage reveal" aria-label="Screens from the T20 Fantasy Cricket app">
+                    <div class="brush" aria-hidden="true"></div>
+                    <div class="phone phone-back">
+                        <div class="phone-speaker"></div>
+                        <img loading="lazy" src="images/screenshots/Screenshot_20250722_023137_Expo Go.jpg" alt="League selection screen">
+                    </div>
+                    <div class="phone phone-front">
+                        <div class="phone-speaker"></div>
+                        <img loading="lazy" src="images/screenshots/Screenshot_20250717_172113_Expo Go.jpg" alt="Player market screen">
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="cpl-promo" class="text-center bg-light p-5 my-5 rounded">
-            <h2>Get Ready for the Caribbean Premier League!</h2>
-            <p>The CPL is the next league coming to T20 Fantasy Cricket. Start planning your team now!</p>
+        <section class="gallery" aria-labelledby="inside-heading">
+            <div class="shell">
+                <div class="section-heading reveal">
+                    <h2 id="inside-heading">Inside the action.</h2>
+                    <p>Your team, the market, and every match—all in one place.</p>
+                </div>
+                <div class="screenshot-rail reveal">
+                    <figure><img loading="lazy" src="images/screenshots/Screenshot_20250717_172004_Expo Go.jpg" alt="T20 Fantasy Cricket match screen"><figcaption>Track your standing</figcaption></figure>
+                    <figure><img loading="lazy" src="images/screenshots/Screenshot_20250717_171917_Expo Go.jpg" alt="T20 Fantasy Cricket leaderboard"><figcaption>Own your season</figcaption></figure>
+                    <figure><img loading="lazy" src="images/screenshots/Screenshot_20250717_172123_Expo Go.jpg" alt="T20 Fantasy Cricket profile screen"><figcaption>Lookup Players</figcaption></figure>
+                </div>
+            </div>
         </section>
 
-        <!--<section id="slideshow" class="my-5">
-            <h2 class="text-center mb-4">App Screenshots</h2>
-            <div class="slideshow-container">
-                <img alt="" src="images/screenshots/Screenshot_20250717_171812_Expo Go.jpg" class="screenshot">
-                <img alt="" src="images/screenshots/Screenshot_20250717_171917_Expo Go.jpg" class="screenshot">
-                <img alt="" src="images/screenshots/Screenshot_20250717_172004_Expo Go.jpg" class="screenshot">
-                <img alt="" src="images/screenshots/Screenshot_20250717_172017_Expo Go.jpg" class="screenshot">
-                <img alt="" src="images/screenshots/Screenshot_20250717_172113_Expo Go.jpg" class="screenshot">
-                <img alt="" src="images/screenshots/Screenshot_20250717_172123_Expo Go.jpg" class="screenshot">
-                <img alt="" src="images/screenshots/Screenshot_20250717_172922_Expo Go.jpg" class="screenshot">
-                <img alt="" src="images/screenshots/Screenshot_20250722_023137_Expo Go.jpg" class="screenshot">
-            </div>
-        </section>-->
-
-        <section class="text-center p-5 download">
-            <h2>Download Now!</h2>
-            <p>Get the T20 Fantasy Cricket app on your favorite platform.</p>
-            <div class="download-buttons">
-                <a href="https://play.google.com/store/apps/details?id=com.jiggletap.t20fantasycricket" class="btn btn-lg btn-dark me-2">Google Play Store</a>
-                <a href="https://play.t20fantasycricket.com/" class="btn btn-lg btn-dark">Play Online</a>
-                <!--<a href="#" class="btn btn-lg btn-dark d-none">Apple App Store</a>-->
+        <section class="final-cta">
+            <div class="shell final-grid reveal">
+                <div>
+                    <h2>Your XI.<br><em>Your call.</em></h2>
+                    <p>The next match is waiting. Build your team and make every ball count.</p>
+                </div>
+                <div class="final-actions">
+                    <a class="button button-dark" href="https://play.t20fantasycricket.com/">Play online <span aria-hidden="true">↗</span></a>
+                    <a class="store-link" href="https://play.google.com/store/apps/details?id=com.jiggletap.t20fantasycricket">Get it on Google Play <span aria-hidden="true">→</span></a>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="bg-dark text-white text-center p-3 mt-5">
-        <div class="footer-links">
-            <a href="how-to-play.html">How to Play</a>
-            <a href="privacy-policy.html">Privacy Policy</a>
-            <a href="delete-info.html">Delete Info</a>
+    <footer class="site-footer">
+        <div class="shell footer-grid">
+            <a class="brand" href="index.html" aria-label="T20 Fantasy Cricket home">
+                <img src="images/t20-fantasy-cricket-logo.png" alt="" width="44" height="44">
+                <span>T20 <b>Fantasy Cricket</b></span>
+            </a>
+            <nav aria-label="Footer navigation">
+                <a href="how-to-play.html">How to Play</a>
+                <a href="privacy-policy.html">Privacy</a>
+                <a href="delete-info.html">Delete account</a>
+            </nav>
+            <p>© 2026 T20 Fantasy Cricket</p>
         </div>
-        <p>&copy; 2026 T20 Fantasy Cricket. All Rights Reserved.</p>
     </footer>
 
-    <script src="js/gsap/gsap-public/minified/gsap.min.js"></script>
-    <script src="js/gsap/gsap-public/minified/ScrollTrigger.min.js"></script>
-    <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
