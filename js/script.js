@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('[data-current-year]').forEach((element) => {
+        element.textContent = new Date().getFullYear().toString();
+    });
+
     const header = document.querySelector('[data-header]');
     const menuButton = document.querySelector('[data-menu-toggle]');
     const nav = document.querySelector('[data-nav]');
